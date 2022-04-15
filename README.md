@@ -17,6 +17,8 @@ operations needed to get your pull request through.
     cd rusty-merge
     cargo install --path .
 
+    Set your GITHUB_API_TOKEN in zsh/bash/fish
+
 Publishing to cargo is to come :D Waiting for a new release of octocrab.
 
 ## Configuration
