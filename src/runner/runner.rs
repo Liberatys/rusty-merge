@@ -1,9 +1,9 @@
 use super::Action;
-use log::{info, trace, warn};
 use super::{should_merge, should_pop, should_update};
 use crate::config::{Configuration, Notification};
 use crate::pull_request::PullRequest;
 use anyhow::{bail, Result};
+use log::{info, trace, warn};
 use notify_rust::Timeout;
 use octocrab::Octocrab;
 
@@ -110,9 +110,7 @@ impl Runner {
                 handler = handler.icon(icon);
             }
 
-            handler
-                .show()
-                .unwrap();
+            handler.show().unwrap();
         }
     }
 

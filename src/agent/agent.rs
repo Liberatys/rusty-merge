@@ -1,9 +1,7 @@
 use crate::config::Configuration;
 use crate::pull_request::PullRequest;
-use tokio::runtime::Runtime;
 use crate::runner::Runner;
 use crate::REPOS;
-use tokio::task;
 use anyhow::{anyhow, Context, Result};
 use clokwerk::ScheduleHandle;
 use clokwerk::{Scheduler, TimeUnits};
@@ -16,6 +14,8 @@ use std::path::PathBuf;
 use std::process::{Command, Stdio};
 use std::thread;
 use std::time::Duration;
+use tokio::runtime::Runtime;
+use tokio::task;
 
 use super::{FailureKind, Message, Request, RequestBody, Response, PROTOCOL_VERSION};
 
