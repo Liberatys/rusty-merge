@@ -13,7 +13,31 @@ operations needed to get your pull request through.
 
 ## Installation
 
-    cargo install rusty-merge
+    git clone https://github.com/Liberatys/rusty-merge
+    cd rusty-merge
+    cargo install --path .
+
+Publishing to cargo is to come :D Waiting for a new release of octocrab.
+
+## Configuration
+
+rusty-merge will write a default configuration file to
+
+    $HOME/.config/rusty-merge/config.yml
+
+The default for this file is:
+
+    [queue]
+    limit = 10
+    interval_in_minutes = 5
+
+    [merger]
+    [notifier.merge]
+    enabled = true
+    title = ""
+
+The default configuration will send a desktop notification on merge of a pull
+request. It will also run the merge checker every 5 minutes (does not reset with rusty-merge force).
 
 ## Usage
 
